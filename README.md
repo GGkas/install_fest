@@ -10,9 +10,9 @@ Before creating partitions for Linux, we need to look out for some things in Win
 
 The most problematic ones are:
 
-> [1] **BitLocker**-enabled disks
-> [2] **MBR** vs **GPT**-partitioned disks
-> [3] **FastStartup** -> this can be disabled from inside the Windows environment
+> - **BitLocker**-enabled disks
+> - **MBR** vs **GPT**-partitioned disks
+> - **FastStartup** -> this can be disabled from inside the Windows environment
 
 In the BIOS, we need to check out for:
 
