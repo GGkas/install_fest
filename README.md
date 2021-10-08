@@ -69,7 +69,9 @@ powercfg -h off
 
 > ### UEFI vs Legacy (CSM)
 > Refer to [MBR vs GPT](#mbr-gpt). Having an UEFI BIOS means the disk is partitioned in GPT format, while having a Legacy BIOS means the disk is most likely partitioned in MBR format.
+
 > For further reading, [this article](https://help.ubuntu.com/community/UEFI) summarizes everything you need to know.
+
 
 ---
 
