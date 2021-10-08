@@ -47,7 +47,7 @@ manage-bde -off <drive letter>:
 diskpart
 list disk
 ```
-> and check whether the Gpt option has an asterisk (\*) ![Example Image](images/diskaprt.png)
+> and check whether the Gpt option has an asterisk (\*) ![Example Image](images/diskpart.png)
 ---
 
 ### FastBoot
