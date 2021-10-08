@@ -21,19 +21,21 @@ In the BIOS, we need to check out for:
 
 For each of those, we have a solution:
 
-> [1a] Using PowerShell:
-> 
+### BitLocker
+#### Using PowerShell
+
 ```bash
 $BLV = Get-BitLockerVolume
 Disable-Bitlocker -MountPoint $BLV
 ```
->
-> [1b] Using CMD:
->
+
+#### Using CMD:
+
 ```bash
 manage-bde -off <drive letter>:
 ```
->
+
+
 > [2] : Run *System Information*, and check the BIOS setting, or run
 ```bash
 diskpart
