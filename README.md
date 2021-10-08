@@ -36,7 +36,7 @@ manage-bde -off <drive letter>:
 ```
 ---
 
-### MBR vs GPT 
+### MBR vs GPT (#mbr-gpt) 
 > Run *System Information* and check the BIOS setting ![System Information. Here we can see that SecureBoot is also enabled.](images/sysinfo.png)
 
 **OR**
@@ -48,16 +48,30 @@ diskpart
 list disk
 ```
 > and check whether the Gpt option has an asterisk (\*) ![Example Image](images/diskpart.png)
+
 ---
 
 ### FastBoot
-> [3] : Disable FastStartup
-> 
-> [4] : Disable SecureBoot
->
-> [5] : Same as *[2]* 
+> #### Using CMD:
+```bash
+powercfg -h off
+```
+> to disable FastBoot
+
+---
+ 
+### SecureBoot
+> Enter the BIOS settings of the host machine, and go to Boot Options. From there, disable SecureBoot.
+> #### **NOTE**: while some BIOS have it enabled, in case your BIOS doesn't, **ALWAYS** enable Virtualization. This option can be also found in Boot Options.
+> After setting these, press F10 to Save and Exit.
+
+---
+
+> ### UEFI vs Legacy (CSM)
+> Refer to [MBR vs GPT](#mbr-gpt). Having an UEFI BIOS means the disk is partitioned in GPT format, while having a Legacy BIOS means the disk is most likely partitioned in MBR format.
 
 ---
 
 ## ---- STEP 2: Create Linux Partition for Linux ----
+
 
