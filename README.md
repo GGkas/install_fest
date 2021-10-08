@@ -37,7 +37,7 @@ manage-bde -off <drive letter>:
 ---
 
 ### MBR vs GPT 
-> Run *System Information* and check the BIOS setting
+> Run *System Information* and check the BIOS setting ![System Information. Here we can see that SecureBoot is also enabled.](images/sysinfo.png)
 
 **OR**
 
@@ -47,6 +47,7 @@ manage-bde -off <drive letter>:
 diskpart
 list disk
 ```
+> and check whether the Gpt option has an asterisk (\*) ![Example Image](images/diskaprt.png)
 ---
 
 ### FastBoot
