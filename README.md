@@ -31,7 +31,7 @@ Disable-Bitlocker -MountPoint $BLV
 
 > #### Using CMD:
 >
-> ```bash
+```bash
 manage-bde -off <drive letter>:
 ```
 ---
@@ -41,11 +41,13 @@ manage-bde -off <drive letter>:
 ** OR **
 > #### Using CMD:
 >
-> ```bash
+```bash
 diskpart
 list disk
 ```
-> 
+---
+
+### FastBoot
 > [3] : Disable FastStartup
 > 
 > [4] : Disable SecureBoot
