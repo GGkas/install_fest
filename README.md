@@ -38,7 +38,7 @@ manage-bde -off <drive letter>:
 
 ### MBR vs GPT 
 > Run *System Information* and check the BIOS setting
-> ** OR **
+**OR**
 > #### Using CMD:
 >
 ```bash
