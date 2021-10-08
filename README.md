@@ -31,13 +31,17 @@ Disable-Bitlocker -MountPoint $BLV
 
 > #### Using CMD:
 >
-```bash
+> ```bash
 manage-bde -off <drive letter>:
 ```
+---
 
-
-> [2] : Run *System Information*, and check the BIOS setting, or run
-```bash
+### MBR vs GPT 
+> Run *System Information* and check the BIOS setting
+** OR **
+> #### Using CMD:
+>
+> ```bash
 diskpart
 list disk
 ```
