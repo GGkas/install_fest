@@ -72,9 +72,33 @@ powercfg -h off
 
 > For further reading, [this article](https://help.ubuntu.com/community/UEFI) summarizes everything you need to know.
 
+**IMPORTANT** : If your disk is GPT partitioned, but it already has an EFI partition, **DO NOT CREATE A NEW ONE** on the next step. Only create one if the disk has no other installations (see [Appendix](#appendix)).
 
 ---
 
-## ---- STEP 2: Create Linux Partition for Linux ----
+## ---- STEP 2: Create Linux Partition for the distribution ----
 
+1. Open the Disk Management tool ![Reference image](images/disk-mgmt.png)
 
+2. Right-click on the volume to partition, then select "Shrink Volume"
+
+3. On the prompt that pops up, select *at least* **20 GB + sizeof(RAM)** to reserve for the new partition (this includes space for the root and swap partitions).
+
+4. If it is not possible to reserve at least this much, there are some things to try before giving up and going for a VM installation (see [Appendix](#appendix)). If all else fails, do not follow the following steps and proceed with a VM installation.
+
+5. After reserving a partition for Linux, insert your Bootable USB stick and reboot the system.
+
+6. Enter BIOS. The button that does so differs between manufacturers, but it is always one of
+	- F9
+	- F10
+	- F11
+	- F12
+	- F2
+
+7. On the Boot Options menu, change the Boot Order to start with the inserted USB stick, then hit F10 to Save and Exit.
+
+---
+
+##  ---- STEP 3: Install the distribution ----   
+
+Test
