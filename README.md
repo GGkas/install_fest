@@ -36,7 +36,7 @@ manage-bde -off <drive letter>:
 ```
 ---
 
-### MBR vs GPT (#mbr-gpt) 
+### <a name="mbr-gpt"></a>MBR vs GPT 
 > Run *System Information* and check the BIOS setting ![System Information. Here we can see that SecureBoot is also enabled.](images/sysinfo.png)
 
 **OR**
