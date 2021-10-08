@@ -12,12 +12,12 @@ The most problematic ones are:
 
 > - **BitLocker**-enabled disks
 > - **MBR** vs **GPT**-partitioned disks
-> - **FastStartup** -> this can be disabled from inside the Windows environment
+> - **FastStartup** | this can be disabled from inside the Windows environment
 
 In the BIOS, we need to check out for:
 
-> [4] **SecureBoot**
-> [5] **UEFI** vs **Legacy** Boot Mode -> this is basically the same as *[2]*
+> - **SecureBoot**
+> - **UEFI** vs **Legacy** Boot Mode | this is basically the same as the *MBR* vs *GPT* problem
 
 For each of those, we have a solution:
 
