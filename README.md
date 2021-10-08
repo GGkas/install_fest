@@ -22,15 +22,15 @@ In the BIOS, we need to check out for:
 For each of those, we have a solution:
 
 ### BitLocker
-#### Using PowerShell
-
-```bash
+> #### Using PowerShell
+>
+ ```bash
 $BLV = Get-BitLockerVolume
 Disable-Bitlocker -MountPoint $BLV
 ```
 
-#### Using CMD:
-
+> #### Using CMD:
+>
 ```bash
 manage-bde -off <drive letter>:
 ```
