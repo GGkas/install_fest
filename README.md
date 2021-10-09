@@ -106,9 +106,9 @@ powercfg -h off
 2. When you get to the installation way, select "Something Else" (in Ubuntu) or Manual.
 
 3. If you're installing Linux in the same disk as Windows:
-	- Select the free space and create the necessary partitions: **//** (root), **swap**, and (optionally) **//home**.
+	- Select the free space and create the necessary partitions: **\/** (root), **swap**, and (optionally) **\/home**.
 	- **swap** needs to be at least the size of the system's RAM.
-	- **//** needs to be at least 20GB.
+	- **\/** needs to be at least 20GB.
 	- If you don't create a separate partition for */home*, you can use all the remaning space for the root partition. Otherwise, use it for /home.
 	- If the disk has an MBR partition scheme, selecting "Logical" instead of "Primary" partition type is recommended. IF the disk has GPT partition, it generally doesn't matter.
 
