@@ -101,4 +101,21 @@ powercfg -h off
 
 ##  ---- STEP 3: Install the distribution ----   
 
-Test
+1. Follow the instructions of the distribution. Always remember to connect to an available network to download proprietary drivers.
+
+2. When you get to the installation way, select "Something Else" (in Ubuntu) or Manual.
+
+3. If you're installing Linux in the same disk as Windows:
+	- Select the free space and create the necessary partitions: **/** (root), **swap**, and (optionally) **/home**.
+	- **swap** needs to be at least the size of the system's RAM.
+	- **/** needs to be at least 20GB.
+	- If you don't create a separate partition for */home*, you can use all the remaning space for the root partition. Otherwise, use it for /home.
+	- If the disk has an MBR partition scheme, selecting "Logical" instead of "Primary" partition type is recommended. IF the disk has GPT partition, it generally doesn't matter.
+
+4. And you're done! Now you can lay back or start another install.
+
+---
+
+## ---- STEP 4: Post-Installation ----  
+
+
