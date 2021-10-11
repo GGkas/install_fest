@@ -155,4 +155,4 @@ Make sure to run `sudo apt update` and `sudo apt upgrade` (this might take some 
 > **Re-enable the Pagefile** (by using the exact same methodology)
 > **(OPTIONALLY) Re-enable System Restore** : `Enable-ComputerRestore -Drive "[Drive Letter]:"`
 
-- If after following these steps, you still don't can't get enough disk space, follow the steps in **[10]** and continue with a VM installation (these are out of the scope of this document so they will not be covered).
+- If after following these steps, you still don't can't get enough disk space, follow the steps in **[x]** and continue with a VM installation (these are out of the scope of this document so they will not be covered).
