@@ -110,7 +110,7 @@ powercfg -h off
 	- **swap** needs to be at least the size of the system's RAM.
 	- **\/** needs to be at least 20GB.
 	- If you don't create a separate partition for */home*, you can use all the remaning space for the root partition. Otherwise, use it for /home.
-	- If the disk has an MBR partition scheme, selecting "Logical" instead of "Primary" partition type is recommended. IF the disk has GPT partition, it generally doesn't matter.
+	- If the disk has an MBR partition scheme, selecting "Logical" instead of "Primary" partition type is recommended. If the disk has GPT partition, it generally doesn't matter.
 
 4. And you're done! Now you can lay back or start another install.
 
@@ -154,7 +154,7 @@ Make sure to run `sudo apt update` and `sudo apt upgrade` (this might take some 
 	10. If you have enough space, good! You can continue on with the installation, but before you do so, we need to restore some of the stuff we disabled. In order to do that:
 > **Re-enable the Pagefile** (by using the exact same methodology)
 >
-> **(OPTIONALLY) Re-enable System Restore** : `Enable-ComputerRestore -Drive "[Drive Letter]:"`
+> **(OPTIONALLY) Re-enable System Restore** : In Powershell: `Enable-ComputerRestore -Drive "[Drive Letter]:"`
 >
 > Reboot
 
