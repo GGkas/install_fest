@@ -131,3 +131,28 @@ Make sure to run `sudo apt update` and `sudo apt upgrade` (this might take some 
 
 ### Regarding GPT | MBR
 
+- If you're installing Linux on a separate hard drive from Windows, that hard drive will need to have an EFI partition. The way to create one is the following:
+	1. When creating partitions during installation, create at the start of the empty space a **primary**, **EFI System Partition (ESP)**. Its size should be 512 MB at max.
+	2. Continue with the rest of the steps (i.e. create the root, swap (and optionally /home partitions).
+
+- After the partition setup is complete, select the disk that **Linux** is on (the whole disk, not a partition of it), as the bootloader installation media. Then proceed to install.
+
+---
+
+### When shrinking a volume fails
+
+- If during the partitioning of the drive to install Linux, you can't seem to receive enough space by the OS, you can try the following:
+	1. Using CMD: `Cleanmgr`. On the GUI prompt that pops up, select **ONLY** the hibernation file and all restore checkpoints.
+	2. Run the `Rstrui.exe` executable to see the state of System Restore for each drive. 
+	3. On powershell: `Disable-ComputerRestore -Drive "<drive-letter>:\"` to disable System Restore (don't worry, we will re-enable it after partitioning)
+	4. Disable the Pagefile: Open up System in Control Panel, then Advanced System Settings \ Advanced \ Performance \ Advanced \ Change \ No Paging File
+	5. Disable hibernation: We've already done that when disabling FastBoot
+	6. Check the C:\ directory, and if there's a `pagefile.sys` file, delete it, if not continue.
+	7. Reboot
+	8. After rebooting, run thourgh cmd: `defrag <drive-letter>:` to defragment the drive you want to partition. **NOTE: This process might take a while, so don't interrupt it at any cost**.
+	9. Reboot, and try to shrink the volume again.
+	10. If you have enough space, good! You can continue on with the installation, but before you do so, we need to restore some of the stuff we disabled. In order to do that:
+> **Re-enable the Pagefile** (by using the exact same methodology)
+> **(OPTIONALLY) Re-enable System Restore** : `Enable-ComputerRestore -Drive "[Drive Letter]:"`
+
+- If after following these steps, you still don't can't get enough disk space, follow the steps in **[10]** and continue with a VM installation (these are out of the scope of this document so they will not be covered).
