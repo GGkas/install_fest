@@ -118,4 +118,16 @@ powercfg -h off
 
 ## ---- STEP 4: Post-Installation ----  
 
+> After rebooting, make sure you can successfully boot both Windows and Linux. If one of them doesn't boot, you have made a mistake and need to trace-back.
+> - If Linux is not booting, either delete the associated partitions and redo the whole process, or consult someone else.
+> - If Windows is not booting, consult someone else.
+
+
+Make sure to run `sudo apt update` and `sudo apt upgrade` (this might take some time depending on network and hardware capabilities), and also install the students' preferred software (e.g. Kate, or even the KDE-Plasma desktop).
+
+---
+
+## <a name="appendix"></a>---- APPENDIX ----
+
+### Regarding GPT | MBR
 
