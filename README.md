@@ -172,7 +172,7 @@ If the option to disable it doesn't appear in the BIOS settings, then proceed wi
 ```bash
 bcdedit /set {current} safeboot minimal
 ```
-	- If that command doesn't work, try this alternative:
+- If that command doesn't work, try this alternative:
 ```bash
 bcdedit /set safeboot minimal
 ```
@@ -184,7 +184,7 @@ bcdedit /set safeboot minimal
 ```bash
 bcdedit /deletevalue {current} safeboot
 ```
-	- Alternatively, try
+- Alternatively, try
 ```bash
 bcdedit /deletevalue safeboot
 ```
