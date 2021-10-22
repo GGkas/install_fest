@@ -159,3 +159,34 @@ Make sure to run `sudo apt update` and `sudo apt upgrade` (this might take some 
 > Reboot
 
 - If after following these steps, you still don't can't get enough disk space, follow the steps in **[x]** and continue with a VM installation (these are out of the scope of this document so they will not be covered).
+
+---
+
+### Intel RST is enabled, but doesn't show up in BIOS - Issue [#1](/../../issues/1)
+
+On older laptops, **Intel® Rapid Storage Technology (RST)** is enabled for the disk drives, which can pose problems when trying to dual boot.
+If the option to disable it doesn't appear in the BIOS settings, then proceed with the following steps to switch from RAID/IDE to AHCI configuration.
+
+1. Open cmd as Administrator.
+2. Enter the following command:
+```bash
+bcdedit /set {current} safeboot minimal
+```
+	- If that command doesn't work, try this alternative:
+```bash
+bcdedit /set safeboot minimal
+```
+3. Reboot and enter BIOS Setup.
+4. Change the ***SATA Operation*** mode to **AHCI**.
+5. Save changes and exit by pressing F10. Winodws will now automatically boot to Safe Mode.
+6. Open cmd as Administrator once again.
+7. Enter the following command:
+```bash
+bcdedit /deletevalue {current} safeboot
+```
+	- Alternatively, try
+```bash
+bcdedit /deletevalue safeboot
+```
+8. Reboot once more and Windows will automatically start with AHCI drivers enabled. You can check if that's the case
+by going to **Device Managemer > IDE ATA/ATAPI Devices**, and checking if AHCI is mentioned.
